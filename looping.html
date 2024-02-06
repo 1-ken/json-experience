@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping through an objeect</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const MYJSON = '{"name":"John", "DOB":"2002-08-19", "city":"nairobi"}'
+       const jsonobj =JSON.parse(MYJSON)
+       for (const key in jsonobj){
+        const value = jsonobj[key]
+        document.getElementById("demo").innerHTML = value
+       }
+
+        
+    </script>
+</body>
+</html>

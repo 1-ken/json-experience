@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converting string to date</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const text = '{"name":"John", "DOB":"2002-08-19", "city":"nairobi"}'
+        const obj = JSON.parse(text, function( key, value){
+            if (key == "DOB"){
+                return new Date(value)
+            }else{
+                return value
+            }
+        })
+        document.getElementById("demo").innerHTML = obj.name + " " + obj.DOB + obj.city
+    </script>
+</body>
+</html>
